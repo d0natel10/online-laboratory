@@ -1,0 +1,287 @@
+.lab6 {
+  
+}
+
+.lab6__header {
+  text-align: center;
+  color: white;
+}
+
+.lab6__container {
+  width: 800px;
+  background-color: #eaf7fd;
+  margin: 0 auto;
+  transform: translateY(20px);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lab6__experiment {
+  height: 300px;
+  position: relative;
+  background-color: #f0f8ff;
+  overflow: hidden;
+}
+
+:root {
+  --wood-color: #c19a6b;
+}
+
+.lab6__table {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(
+    to right,
+    var(--wood-color),
+    #b88a5a,
+    var(--wood-color)
+  );
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lab6__cart {
+  position: absolute;
+  bottom: 80px;
+  left: 200px;
+  width: 120px;
+  height: 60px;
+  background-color: #4682b4;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.lab6__cart::before,
+.lab6__cart::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  width: 25px;
+  height: 25px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.lab6__cart::before {
+  left: 15px;
+}
+
+.lab6__cart::after {
+  right: 15px;
+}
+
+.lab6__pulley {
+  position: absolute;
+  bottom: 80px;
+  right: 200px;
+  width: 40px;
+  height: 40px;
+  background-color: #a9a9a9;
+  border-radius: 50%;
+  border: 3px solid #777;
+  z-index: 5;
+}
+
+.lab6__weight {
+  position: absolute;
+  top: 50px;
+  right: 210px;
+  width: 30px;
+  height: 50px;
+  background-color: #b22222;
+  z-index: 2;
+}
+
+.lab6__rope {
+  position: absolute;
+  top: 70px;
+  left: 260px;
+  width: 340px;
+  height: 2px;
+  background-color: #555;
+  transform-origin: left center;
+  z-index: 1;
+}
+
+.animation-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 0 0 8px 8px;
+}
+
+.animation-controls button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4d4d6e;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s;
+}
+
+.animation-controls button:hover {
+  background-color: #3a3a5f;
+}
+
+.animation-controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #8bc9b1;
+  transition: width 0.1s linear;
+}
+
+.lab-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.left_column {
+  margin-top: 130px;
+  width: 30%;
+  padding: 20px;
+  background-color: #4d4d6e;
+  color: white;
+}
+
+.central_column {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.instructions {
+  background-color: rgba(77, 77, 110, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.instruction-step {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.step-number {
+  background-color: #8bc9b1;
+  color: #2d3e50;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.formula {
+  display: inline-block;
+  background-color: rgba(139, 201, 177, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.conclusion {
+  text-align: center;
+  width: 400px;
+}
+
+.results table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: linear-gradient(135deg, #4d4d6e, #3a3a5f);
+  color: white;
+}
+
+.results th, .results td {
+  padding: 10px;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.results input {
+  width: 80px;
+  padding: 5px;
+  background-color: rgba(255,255,255,0.2);
+  border: 1px solid #8bc9b1;
+  color: white;
+}
+
+.calculations input {
+  width: 120px;
+  padding: 5px;
+  margin-left: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border: 1px solid #ccc;
+}
+
+.conclusion textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.action-buttons {
+  transform: translateX(-30px);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-button, .submit-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.save-button {
+  background-color: #8bc9b1;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #7ab8a0;
+}
+
+.submit-button {
+  background-color: #4d4d6e;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #3a3a5f;
+}

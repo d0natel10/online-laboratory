@@ -1,0 +1,133 @@
+/* Стили для страницы профиля */
+.profile-page {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+.profile-page-logout {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.user-info {
+  background-color: var(--light-brown);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.user-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.user-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.edit-form input {
+  padding: 10px;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.completed-labs {
+  background-color: var(--blue);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.completed-labs h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.completed-labs ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.completed-labs li {
+  margin-bottom: 10px;
+}
+
+.completed-labs button {
+  background-color: var(--dark-orange);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.completed-labs button:hover {
+  background-color: #8b7e71;
+}
+
+/* Модальное окно */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal-content h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.modal-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.modal-content button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #4a6c84;
+}

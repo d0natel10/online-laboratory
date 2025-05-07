@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+.home-container {
+    display: flex;
+    flex-direction: column; 
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Hero Section - убрали фиксированную высоту */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: url('../images/lab1home.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Немного затемняем фон */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.parallax-bg {
+  position: relative;
+  height: 100vh;
+  background: url('../images/lab2.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.labs-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Для плавного скролла на iOS */
+    padding-bottom: 20px; /* Чтобы не обрезались тени */
+}
+
+.labs-scroll-container:active {
+    cursor: grabbing;
+}
+
+.labs-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.labs-scroll-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.labs-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.labs-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Модифицируем сетку карточек */
+.labs-grid {
+    display: inline-flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    min-width: max-content;
+}
+
+/* Делаем карточки одинакового размера */
+.lab-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    width: 350px; /* Фиксированная ширина */
+    height: 450px; /* Фиксированная высота */
+    flex-shrink: 0; /* Запрещаем сжатие */
+    transition: transform 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: scale(1.03);
+}
+
+.parallax-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+} 
+
+.lab-catalog {
+  position: relative;
+  z-index: 2;
+}
+
+.lab-catalog p {
+    color: white;
+}
+
+/* About Section */
+.about-section-home {
+    background: white; 
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.about-section-home h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--light-brown);
+}
+
+.about-section-home p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-family: 'Roboto Slab', serif;
+    color: var(--blue);
+    margin-bottom: 1rem;
+}
+
+.lab-catalog {
+  width: 1200px;
+    position: relative;
+    z-index: 2;
+}
+
+.lab-catalog h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.catalog-description {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+
+/* Lab Card */
+
+
+.lab-card-content {
+    padding: 1.5rem;
+    flex: 1; /* Растягиваем на всё доступное пространство */
+    display: flex;
+    flex-direction: column;
+}
+
+.lab-card p {
+    margin-bottom: 1.5rem;
+    color: #666;
+    flex-grow: 1; /* Текст занимает всё свободное место, прижимая кнопку вниз */
+}
+
+/* .lab-:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+} */
+
+.lab-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--dark-orange);
+}
+
+.lab-card h4 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--blue);
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--dark-orange);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: auto; 
+    width: fit-content; 
+    align-self: center; 
+    transform: translateY(-30px);
+}
+
+.start-btn:hover {
+    background-color: #9c8d80;
+    transform: translateY(-33px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section-home {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0;
+    background-color: var(--light-blue);
+    color: white;
+    text-align: center;
+}
+
+.contact-section-home h2 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5rem;
+}
+
+.contact-section-home p {
+    color: white;
+    max-width: 700px;
+    font-size: 1.1rem;
+    padding-top: 20px;
+}
+
+.cta-button-home {
+    margin-top: 30px;
+    padding: 1rem 3rem;
+    background-color: var(--dark-orange);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button-home:hover {
+    background-color: #9c8d80;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .labs-grid {
+        grid-template-columns: 1fr;
+    }
+}

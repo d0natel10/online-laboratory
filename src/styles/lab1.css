@@ -1,0 +1,835 @@
+/* Глобальные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+a {
+    color:  #8bc9b1; /* Основной цвет ссылок */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffcc00; /* Цвет при наведении */
+}
+
+
+
+.action-buttons {
+    width: 40%;
+        display: flex;
+        justify-content: space-between; 
+        margin-bottom: 30px;
+}
+    
+.save-button, .submit-button {
+        padding: 10px 20px;
+        background-color: #8bc9b1;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+}
+    
+.save-button:hover, .submit-button:hover {
+        background-color: #166146;
+        transform: scale(1.05);
+}
+    
+.save-button:active, .submit-button:active {
+        background-color: #0f4c3a; 
+        transform: scale(0.95);
+}
+
+.lab-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    gap: 20px; /* Расстояние между колонками */
+    padding-inline: 50px;
+    margin-top: 100px;
+}
+
+.tube-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 750px;
+    background-color: #eaf7fd;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+
+    p {
+        margin-bottom: 20px;
+    }
+    
+}
+
+.central-title1 {
+    font-size: 35px;
+}
+
+.central-title2 {
+    font-size: 25px;
+}
+
+.left_column {
+    width: 30%;
+    background-color: #4d4d6e; /* Темно-синий фон */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    /* transform: translateY(100px); */
+}
+
+.instructions {
+    background-color: rgba(77, 77, 110, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+  }
+  
+.instructions h3 {
+    color: #8bc9b1;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.4em;
+  }
+  
+  .instruction-step {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    background-color: #8bc9b1;
+    color: #2d3e50;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-right: 15px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .step-content {
+    color: #e0e0e0;
+    line-height: 1.5;
+    padding-top: 3px;
+  }
+  
+  .formula {
+    display: inline-block;
+    background-color: rgba(139, 201, 177, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-family: 'Courier New', monospace;
+    border-left: 2px solid #8bc9b1;
+  }
+
+  .calculations p {
+    color: white;
+  }
+  
+  .calculations-list {
+    margin: 10px 0 0 20px;
+  }
+  
+  .calculations-list li {
+    margin-bottom: 5px;
+    position: relative;
+  }
+  
+  .calculations-list li::before {
+    content: "•";
+    color: #8bc9b1;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .conclusion-step {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(139, 201, 177, 0.5);
+  }
+  
+  .conclusion-step .step-number {
+    background-color: #ffcc00;
+    color: #2d3e50;
+  }
+
+.left_column p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.central_column {
+    width: 65%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #4d4d6e; /* Темно-синий фон */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #4d4d6e, #3a3a5f);
+    border: 2px solid #8bc9b1;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+    color: #e0e0e0; /* Светлый текст */
+    position: relative;
+}
+
+th::after, td::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #818f8a, transparent);
+}
+
+th {
+    background-color: #4d4d6e; /* Темно-серый фон для заголовков */
+    color: #fff; /* Белый текст */
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Увеличим расстояние между элементами */
+    margin-bottom: 20px;
+
+    p {
+        color: white;
+        transform: translateY(-10px);
+    }
+}
+
+.controls label {
+    font-size: 14px;
+    color: white; /* Светлый текст */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Расстояние между радио-кнопкой и текстом */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.controls label:hover {
+    color: #ffffff; /* Более яркий текст при наведении */
+}
+
+.controls input[type="radio"] {
+    appearance: none; /* Убираем стандартный вид */
+    width: 19px;
+    height: 19px;
+    border: 2px solid #4d4d6e; /* Акцентный цвет границы */
+    border-radius: 30%; /* Делаем круглым */
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 22px;
+}
+
+.controls input[type="radio"]:checked {
+    background-color: #3f6e5c; /* Цвет заливки при выборе */
+    border-color: #000000; /* Граница становится акцентной */
+}
+
+.controls input[type="radio"]:hover {
+    border-color: #ffffff; /* Изменяем цвет границы при наведении */
+}
+
+.controls button {
+    padding: 10px 20px;
+    background-color: #8bc9b1; /* Акцентный цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #166146; /* Темно-зеленый цвет при наведении */
+    transform: scale(1.05); /* Небольшое увеличение кнопки */
+}
+
+.controls button:active {
+    background-color: #0f4c3a; /* Еще темнее при клике */
+    transform: scale(0.95); /* Небольшое уменьшение кнопки */
+}
+
+.results {
+    background-color: #4d4d6e; /* Темно-синий фон */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transform: translateY(300px);
+}
+
+.results p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff; /* Светлый текст */
+}
+
+.conclusion textarea {
+    width: 600px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    font-size: 16px;
+    background-color: #4d4d6e; /* Темно-синий фон */
+    color: #000000; /* Светлый текст */
+    border: 2px solid #8bc9b1;
+    transition: all 0.3s ease;
+}
+
+.conclusion textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #4d4d6e;
+    border-color: #ffffff;
+}
+
+:root {
+    --tube-length: 450px;
+    --tube-width: 75px;
+    --bubble-size: 15px;
+    --water-height: 600px; /* Высота воды в трубке */
+    --clip-path-bottom: polygon(0 0, 100% 0, 100% 92%, 100% 91%, 100% 93%, 0 93%);
+    --clip-path-top: polygon(52% 5%, 100% 5%, 100% 100%, 50% 100%, 0 100%, 0 5%);
+}
+
+.tube {
+    position: relative;
+    width: var(--tube-width);
+    height: var(--tube-length);
+    background: 
+        linear-gradient(
+            to right,
+            rgba(180, 200, 220, 0.12) 0%,
+            rgba(210, 230, 250, 0.2) 50%,
+            rgba(180, 200, 220, 0.12) 100%
+        ),
+        linear-gradient(
+            to right,
+            rgba(100, 120, 140, 0.3) 0%,
+            transparent 15%,
+            transparent 85%,
+            rgba(100, 120, 140, 0.3) 100%
+        );
+    border: 1px solid rgba(120, 140, 160, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    transform-origin: center;
+    transition: transform 0.8s cubic-bezier(0.33, 1, 0.68, 1);
+    box-shadow: 
+        inset -4px 0 8px rgba(0,0,0,0.15),
+        inset 4px 0 8px rgba(0,0,0,0.15),
+
+        0 10px 25px rgba(0,0,0,0.25),
+
+        inset 0 0 15px rgba(255,255,255,0.1),
+
+        0 0 0 1px rgba(255,255,255,0.05),
+        0 0 0 2px rgba(0,0,0,0.1);
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 50%;
+        height: 30%;
+        background: linear-gradient(
+            135deg,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.4) 50%,
+            rgba(255,255,255,0) 100%
+        );
+        border-radius: 50%;
+        filter: blur(8px);
+        transform: rotate(25deg);
+        z-index: 3;
+        opacity: 0.8;
+    }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 20%;
+        right: 20%;
+        width: 30%;
+        height: 15%;
+        background: linear-gradient(
+            45deg,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.25) 50%,
+            rgba(255,255,255,0) 100%
+        );
+        border-radius: 50%;
+        filter: blur(5px);
+        z-index: 3;
+        opacity: 0.6;
+    }
+}
+
+.water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--water-height);
+    background: linear-gradient(
+        to bottom,
+        #4a8db7 0%,
+        #3a7ca8 30%,
+        #2a6b95 70%,
+        #1a5a82 100%
+    );
+    clip-path: var(--clip-path-top);
+    transition: all 1.8s cubic-bezier(0.33, 1, 0.68, 1);
+    box-shadow: 
+        inset 0 -20px 30px rgba(0,60,120,0.5),
+        inset 0 10px 25px rgba(100,180,230,0.4),
+        /* Тень воды на стекле */
+        inset 2px 0 15px rgba(0,40,80,0.3),
+        inset -2px 0 15px rgba(0,40,80,0.3);
+    
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 15px;
+        background: linear-gradient(
+            to bottom,
+            rgba(170,210,240,0.5) 0%,
+            rgba(170,210,240,0.2) 50%,
+            transparent 100%
+        );
+        border-radius: 50%;
+        animation: waterSurface 4s infinite ease-in-out;
+    }
+    
+    /* Пузырьки на дне */
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 20%;
+        width: 60%;
+        height: 10px;
+        background: radial-gradient(
+            circle,
+            rgba(255,255,255,0.3) 0%,
+            rgba(255,255,255,0) 70%
+        );
+        filter: blur(1px);
+        opacity: 0.7;
+    }
+}
+
+.tube.flipped {
+    transform: rotate(180deg);
+
+}
+
+@keyframes waterSurface {
+    0%, 100% { transform: scaleY(1) scaleX(1.05); opacity: 0.8; }
+    50% { transform: scaleY(1.1) scaleX(1); opacity: 0.6; }
+}
+
+@keyframes waterRotaterBottom {
+    0% {
+        clip-path: polygon(52% 5%, 100% 5%, 100% 100%, 50% 100%, 0 100%, 0 5%);
+    }
+    2.5% {
+        clip-path: polygon(56% 5%, 100% 4%, 100% 100%, 50% 100%, 0 100%, 0 7%);
+    }
+    5% {
+        clip-path: polygon(60% 5%, 100% 3%, 100% 100%, 50% 100%, 0 100%, 0 10%);
+    }
+    7.5% {
+        clip-path: polygon(60% 5%, 100% 2%, 100% 100%, 50% 100%, 0 100%, 0 12%);
+    }
+    10% {
+        clip-path: polygon(60% 5%, 100% 1%, 100% 100%, 50% 100%, 0 100%, 0 14%);
+    }
+    12.5% {
+        clip-path: polygon(60.5% 6%, 100% 0.5%, 100% 100%, 50% 100%, 0 100%, 0 17%);
+    }
+    15% {
+        clip-path: polygon(61% 8%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 20%);
+    }
+    17.5% {
+        clip-path: polygon(75% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 23%);
+    }
+    20% {
+        clip-path: polygon(90% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 26%);
+    }
+    22.5% {
+        clip-path: polygon(82% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 30%);
+    }
+    25% {
+        clip-path: polygon(74% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 34%);
+    }
+    27.5% {
+        clip-path: polygon(66% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 37%);
+    }
+    30% {
+        clip-path: polygon(59% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 41%);
+    }
+    32.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 51%);
+    }
+    35% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 61%);
+    }
+    37.5% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 70%);
+    }
+    40% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 79%);
+    }
+    42.5% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 1% 100%, 6% 79%);
+    }
+    45% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 3% 100%, 12% 80%);
+    }
+    47.5% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 12% 100%, 19% 81%);
+    }
+    50% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 50% 100%, 21% 100%, 27% 82%);
+    }
+    52.5% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 60% 100%, 31% 100%, 34% 82%);
+    }
+    55% {
+        clip-path: polygon(48% 0, 100% 0, 100% 100%, 70% 100%, 41% 100%, 42% 83%);
+    }
+    57.5% {
+        clip-path: polygon(40% 0, 100% 0, 100% 100%, 74% 100%, 50% 100%, 47% 83%);
+    }
+    60% {
+        clip-path: polygon(33% 0, 100% 0, 100% 100%, 79% 100%, 60% 100%, 53% 83%);
+    }
+    62.5% {
+        clip-path: polygon(24% 0, 100% 0, 100% 100%, 100% 100%, 69% 100%, 36% 10%);
+    }
+    65% {
+        clip-path: polygon(16% 0, 100% 0, 100% 100%, 100% 100%, 78% 100%, 20% 10%);
+    }
+    67.5% {
+        clip-path: polygon(8% 0, 100% 0, 100% 100%, 100% 100%, 81% 100%, 12% 10%);
+    }
+    70% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 84% 100%, 5% 10%);
+    }
+    72.5% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 89% 100%, 2% 7%);
+    }
+    75% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 94% 100%, 0 4%);
+    }
+    77.5% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 97% 100%, 0 7%);
+    }
+    80% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%, 0 11%);
+    }
+    82.5% {
+        clip-path: polygon(0 0, 100% 0, 100% 99%, 100% 99%, 100% 99%, 0 16%);
+    }
+    85% {
+        clip-path: polygon(0 0, 100% 0, 100% 97%, 100% 97%, 100% 97%, 0 22%);
+    }
+    87.5% {
+        clip-path: polygon(0 0, 100% 0, 100% 97%, 100% 97%, 100% 97%, 0 30%);
+    }
+    90% {
+        clip-path: polygon(0 0, 100% 0, 100% 97%, 100% 97%, 100% 97%, 0 38%);
+    }
+    92.5% {
+        clip-path: polygon(0 0, 100% 0, 100% 94%, 100% 93%, 100% 92%, 0 46%);
+    }
+    95% {
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 100% 91%, 100% 90%, 0 54%);
+    }
+    97.5% {
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 100% 91%, 100% 92%, 0 73%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 100% 91%, 100% 93%, 0 93%);
+    }
+}
+
+@keyframes waterRotaterTop {
+    0% {
+        clip-path: polygon(53% 0, 100% 0, 100% 95%, 51% 95%, 0 95%, 0 0);
+    }
+    2.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 95%, 50% 94%, 0 92%, 0 0);
+    }
+    5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 95%, 49% 92%, 0 89%, 0 0);
+    }
+    7.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 96%, 49% 91%, 0 87%, 0 0);
+    }
+    10% {
+        clip-path: polygon(53% 0, 100% 0, 100% 98%, 49% 90%, 0 85%, 0 0);
+    }
+    12.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 99%, 49% 89%, 0 83%, 0 0);
+    }
+    15% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 49% 89%, 0 77%, 0 0);
+    }
+    17.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 65% 100%, 0 73%, 0 0);
+    }
+    20% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 82% 100%, 0 70%, 0 0);
+    }
+    22.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 74% 100%, 0 65%, 0 0);
+    }
+    25% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 67% 100%, 1% 60%, 0 0);
+    }
+    27.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 63% 100%, 0 53%, 0 0);
+    }
+    30% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 0 46%, 0 0);
+    }
+    32.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 0 40%, 0 0);
+    }
+    35% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 1% 34%, 0 0);
+    }
+    37.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 0 24%, 0 0);
+    }
+    40% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 0 14%, 0 0);
+    }
+    42.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 5% 9%, 4% 0);
+    }
+    45% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 11% 5%, 9% 0);
+    }
+    47.5% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 20% 5%, 18% 0);
+    }
+    50% {
+        clip-path: polygon(53% 0, 100% 0, 100% 100%, 59% 100%, 29% 5%, 26% 0);
+    }
+    52.5% {
+        clip-path: polygon(64% 0, 100% 0, 100% 100%, 59% 100%, 38% 5%, 37% 0);
+    }
+    55% {
+        clip-path: polygon(76% 0, 100% 0, 100% 100%, 59% 100%, 48% 4%, 46% 0);
+    }
+    57.5% {
+        clip-path: polygon(88% 0, 100% 0, 100% 100%, 53% 100%, 53% 4%, 58% 0);
+    }
+    60% {
+        clip-path: polygon(76% 0, 100% 0, 100% 100%, 48% 100%, 58% 4%, 60% 0);
+    }
+    62.5% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 35% 100%, 65% 5%, 68% 0);
+    }
+    65% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 25% 100%, 71% 5%, 73% 0);
+    }
+    67.5% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 10% 100%, 74% 5%, 76% 0);
+    }
+    70% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 4% 100%, 77% 5%, 79% 0);
+    }
+    72.5% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 3% 100%, 0 94%, 82% 0);
+    }
+    75% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 2% 100%, 0 88%, 86% 0);
+    }
+    77.5% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 2% 100%, 0 76%, 87% 0);
+    }
+    80% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 2% 100%, 0 64%, 88% 0);
+    }
+    82.5% {
+        clip-path: polygon(100% 4%, 100% 7%, 100% 100%, 2% 100%, 0 50%, 91% 0);
+    }
+    85% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 36%, 94% 0);
+    }
+    87.5% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 29%, 96% 0);
+    }
+    90% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 22%, 100% 7%);
+    }
+    92.5% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 18%, 100% 8%);
+    }
+    95% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 14%, 100% 9%);
+    }
+    97.5% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 10%, 100% 8%);
+    }
+    100% {
+        clip-path: polygon(100% 8%, 100% 10%, 100% 100%, 2% 100%, 0 7%, 100% 7%);
+    }
+}
+
+.water.water-flipped {
+    animation: waterRotaterBottom 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    clip-path: var(--clip-path-bottom);
+}
+
+.water.water-flipped-top {
+    animation: waterRotaterTop 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+    clip-path: var(--clip-path-top);
+}
+
+.bubble {
+    position: absolute;
+    width: var(--bubble-size);
+    height: var(--bubble-size);
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(255,255,255,0.95) 0%,
+        rgba(220,240,255,0.7) 50%,
+        rgba(180,220,240,0.3) 100%
+    );
+    border-radius: 50%;
+    left: 40%;
+    transform: translateX(-50%);
+    transition: transform 9s linear;
+    box-shadow: 
+        0 1px 3px rgba(0,0,0,0.2),
+        inset 0 -2px 4px rgba(0,0,0,0.1),
+        inset 0 1px 2px rgba(255,255,255,0.8);
+    
+    /* Блик */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        width: 30%;
+        height: 30%;
+        background: rgba(255,255,255,0.9);
+        border-radius: 50%;
+        filter: blur(0.5px);
+    }
+    
+    /* Отражение */
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 15%;
+        right: 25%;
+        width: 20%;
+        height: 10%;
+        background: rgba(255,255,255,0.4);
+        border-radius: 50%;
+        filter: blur(0.5px);
+    }
+}
+
+.bubble-top {
+    transform: translateY(calc(0px + var(--bubble-size) * 1.6));
+}
+
+.bubble-bottom {
+    transform: translateY(calc(var(--tube-length) - var(--bubble-size) * 4.2));
+}
+
+.division {
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    left: 5%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        #e74c3c 20%,
+        #e74c3c 80%,
+        transparent 100%
+    );
+    box-shadow: 
+        0 1px 1px rgba(255,255,255,0.3) inset,
+        0 -1px 3px rgba(0,0,0,0.4) inset,
+        /* Тень от деления на стекле */
+        0 0 10px rgba(231, 76, 60, 0.5);
+    z-index: 2;
+}
+
+.error-message {
+    color: #ff6b6b;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+    margin: 5px 0;
+    font-size: 14px;
+}
